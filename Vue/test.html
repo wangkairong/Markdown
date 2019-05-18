@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/>
+   
+</head>
+<body>
+    <!--引入JS库-->
+     <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./node_modules/marked/marked.min.js"></script>
+   <script src="./node_modules/axios/dist/axios.js"></script>
+    <div id="app">
+        <!--主区域：书写-->
+        <section class="main">
+            <textarea v-model="editor"></textarea>
+        </section>
+
+        <!--预览区-->
+        <aside class="preview" v-html="editorPreview">
+            
+        </aside>
+    </div>
+     <!--引入JS代码-->
+     <script src="index.js"></script>
+</body>
+</html>
